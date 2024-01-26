@@ -3,7 +3,7 @@ const url = require('url');
 const fs = require('fs');
 const qs = require("qs");
 const { promisify } = require('util');
-const PORT = 3000;
+const PORT =  process.env.PORT || 4000;
 
 let handlers = {}
 const readFileAsync = promisify(fs.readFile);
